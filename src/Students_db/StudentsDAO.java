@@ -31,9 +31,9 @@ public class StudentsDAO {
 
                 double percentage = (m + c + p) / 3;
                 System.out.println("\n Student Found \n");
-                System.out.printf("%-10 %-15 % -10 %-10 %-10 %-10 %-10 \n", "Roll", "Name", "Maths", "Chemistry", "Physics", "Percentage");
+                System.out.printf("%-8s %-10s %-6s %-8s %-10s %-14s %-10s %-10s \n", "Roll", "Name","Age", "Course", "Maths", "Chemistry", "Physics", "Percentage");
                 System.out.println("--------------------------------------------------------------------------------------------------------");
-                System.out.printf("%-10d %-15s %-10d %-10d %-10d %-10.2f\n", rs.getInt("roll_no"), rs.getString("name"), m, c, p, percentage);
+                System.out.printf("%-8d %-10s %-6d %-8s %-10d %-14d %-10d %-10.2f\n", rs.getInt("roll_no"), rs.getString("name"),rs.getInt("age"), rs.getString("course"),m, c, p, percentage);
             } else {
                 System.out.println("Students not found");
             }
